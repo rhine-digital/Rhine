@@ -20,15 +20,19 @@ class _MembershipPageState extends State<MembershipPage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: new AppBar(title: new Text("Chat")),
+      appBar: new AppBar(title: new Text("Membership")),
       bottomNavigationBar: new BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
-          IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),),
+          IconButton(onPressed: () {
+            Navigator.pushNamed(context, 'chatScreen');
+          }, icon: Icon(Icons.chat_bubble),),
           IconButton(onPressed: () {}, icon: Icon(Icons.location_searching),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.home),),
+          IconButton(onPressed: () {
+            Navigator.pushNamed(context, 'homepage');
+          }, icon: Icon(Icons.home),),
           IconButton(onPressed: () {}, icon: Icon(Icons.inbox),),
           IconButton(onPressed: () {}, icon: Icon(Icons.account_circle),),
           ],
