@@ -7,7 +7,7 @@ import 'package:flutter/material.dart';
 import '../src/views/homepage.dart';
 import '../src/resources/app-palette.dart';
 
-class MyApp extends StatelessWidget {
+class RhineApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -25,7 +25,7 @@ class MyApp extends StatelessWidget {
         // is not restarted.
         primarySwatch: Colors.blue,
       ),
-      home: MyHomePage(title: 'Rhine Demo Home Page'),
+      home: MyHomePage(title: 'Rhine Demo HomePage'),
     );
   }
 }
