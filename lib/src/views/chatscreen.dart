@@ -1,6 +1,6 @@
 /*
 Created: 24-06-19
-Description: Chatbox view
+Description: Chatscreen for mechant to user chat interface
 */
 
 import 'package:flutter/material.dart';
@@ -11,22 +11,15 @@ class FABBottomAppBarItem {
   String text;
 }
 
-class Chatbox extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return new MaterialApp(
-      title: "Chat",
-      home: new ChatScreen(),
-    );
-  }
-}
-
 class ChatScreen extends StatefulWidget {                     //modified
+  ChatScreen({Key key, this.title}) : super(key: key);
+
+  final String title;
   @override                                                        //new
   State createState() => new ChatScreenState();                    //new
 } 
 
-// Add/Modify the ChatScreenState class definition in main.dart - Fred
+// Add/Modify the ChatScreenState class definition in chatscreen.dart - Fred
 
 class ChatScreenState extends State<ChatScreen> { 
 
@@ -49,8 +42,12 @@ class ChatScreenState extends State<ChatScreen> {
         children: <Widget>[
           IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),),
           IconButton(onPressed: () {}, icon: Icon(Icons.location_searching),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.home),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.inbox),),
+          IconButton(onPressed: () {
+            Navigator.pushNamed(context, 'homepage');
+          }, icon: Icon(Icons.home),),
+          IconButton(onPressed: () {
+            Navigator.pushNamed(context, 'membershipPage');
+          }, icon: Icon(Icons.inbox),),
           IconButton(onPressed: () {}, icon: Icon(Icons.account_circle),),
           ],
         ),
