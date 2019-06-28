@@ -1,27 +1,18 @@
 /*
-Created: 24-06-19
+Created: 28-06-19
 Edited: 28-06-19
-Description: Membership page for Rhine. Displays membership info for respective merchants
+Description: Profile page to display user settings and other user-related information
 */
 
 import 'package:flutter/material.dart';
 
-class MembershipPage extends StatefulWidget {
-  MembershipPage({Key key, this.title}) : super(key : key);
 
-
-  final String title;
-  @override
-  _MembershipPageState createState() => _MembershipPageState();
-}
-
-class _MembershipPageState extends State<MembershipPage> {
+class Profile extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    
     return Scaffold(
-      appBar: new AppBar(title: new Text("Membership")),
+      appBar: new AppBar(title: new Text("Profile")),
       bottomNavigationBar: new BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: new Row(
@@ -38,10 +29,10 @@ class _MembershipPageState extends State<MembershipPage> {
             height: 10,
             width: 20,
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.inbox),),
           IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/profile');
-          }, icon: Icon(Icons.account_circle),),
+            Navigator.pushNamed(context, '/membershipPage');
+          }, icon: Icon(Icons.inbox),),
+          IconButton(onPressed: () {}, icon: Icon(Icons.account_circle),),
           SizedBox(),
           ],
         ),
