@@ -4,7 +4,7 @@ Description: Runs application
 */
 
 import 'package:flutter/material.dart';
-import 'src/app.dart';
+import 'package:rhine/src/app.dart';
 
 main() => runApp(RhineApp());
 
