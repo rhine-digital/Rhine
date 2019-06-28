@@ -1,5 +1,6 @@
 /*
 Created: 24-06-19
+Edited: 28-06-19
 Description: Chatscreen for mechant to user chat interface
 */
 
@@ -40,15 +41,22 @@ class ChatScreenState extends State<ChatScreen> {
         child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          SizedBox(),
           IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.location_searching),),
           IconButton(onPressed: () {
-            Navigator.pushNamed(context, 'homepage');
-          }, icon: Icon(Icons.home),),
+            Navigator.pushNamed(context, '/discovery');
+          }, icon: Icon(Icons.location_searching),),
+          Container(
+            height: 10,
+            width: 20,
+          ),
           IconButton(onPressed: () {
-            Navigator.pushNamed(context, 'membershipPage');
+            Navigator.pushNamed(context, '/membershipPage');
           }, icon: Icon(Icons.inbox),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.account_circle),),
+          IconButton(onPressed: () {
+            Navigator.pushNamed(context, '/profile');
+          }, icon: Icon(Icons.account_circle),),
+          SizedBox(),
           ],
         ),
       ),

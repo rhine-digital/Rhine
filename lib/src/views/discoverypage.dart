@@ -1,12 +1,13 @@
 /*
 Created: 24-06-19
+Edited: 28-06-19
 Description: Homepage for Rhine. The page the app routes to upon accessing the app. Displays promotion carousell and recent discounts
 */
 
 import 'package:flutter/material.dart';
 
-class MyHomePage extends StatefulWidget {
-  MyHomePage({Key key, this.title}) : super(key: key);
+class DiscoveryPage extends StatefulWidget {
+  DiscoveryPage({Key key, this.title}) : super(key: key);
 
   // This widget is the home page of your application. It is stateful, meaning
   // that it has a State object (defined below) that contains fields that affect
@@ -20,10 +21,10 @@ class MyHomePage extends StatefulWidget {
   final String title;
 
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _DiscoveryPageState createState() => _DiscoveryPageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _DiscoveryPageState extends State<DiscoveryPage> {
   int _counter = 0;
 
   void _incrementCounter() {
@@ -46,21 +47,28 @@ class _MyHomePageState extends State<MyHomePage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: new AppBar(title: new Text("HomePage")),
+      appBar: new AppBar(title: new Text("Discovery")),
       bottomNavigationBar: new BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: new Row(
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
+          SizedBox(),
           IconButton(onPressed: () {
-            Navigator.pushNamed(context, 'chatScreen');
+            Navigator.pushNamed(context, '/chatScreen');
           }, icon: Icon(Icons.chat_bubble),),
           IconButton(onPressed: () {}, icon: Icon(Icons.location_searching),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.home),),
+          Container(
+            height: 10,
+            width: 20,
+          ),
           IconButton(onPressed: () {
-            Navigator.pushNamed(context, 'membershipPage');
+            Navigator.pushNamed(context, '/membershipPage');
           }, icon: Icon(Icons.inbox),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.account_circle),),
+          IconButton(onPressed: () {
+            Navigator.pushNamed(context, '/profile');
+          }, icon: Icon(Icons.account_circle),),
+          SizedBox(),
           ],
         ),
       ),

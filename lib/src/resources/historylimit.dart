@@ -1,5 +1,6 @@
 /*
 Created: 24-06-19
+Edited: 28-06-19
 Description: Controls the history limit of the stack of routes
 */
 
@@ -22,8 +23,11 @@ class HistoryLimit extends NavigatorObserver {
   @override
   void didPush(Route route, Route previousRoute) {
     history.add(route);
-    if (history.length >= limit) {
-      this.navigator.removeRoute(history.first);
+    if (history.length > limit) {
+      //Delay remove route to allow current operation to complete and prevent !_debugLocked is true
+      Future.delayed(Duration.zero, () {
+        this.navigator.removeRoute(history[1]);
+      });
     }
   }
 
