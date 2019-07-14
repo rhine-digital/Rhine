@@ -1,6 +1,6 @@
 /*
 Created: 24-06-19
-Edited: 28-06-19
+Edited: 29-06-19
 Description: Stores app-wide information
 */
 
@@ -22,10 +22,9 @@ class RhineApp extends StatelessWidget {
         primarySwatch: Colors.blue,
       ),
       home: ChatScreen(title: 'Rhine Demo HomePage'),
-      initialRoute: RouteStore.initialRoute,
       routes: RouteStore.routes,
       navigatorObservers: [
-        HistoryLimit(5),
+        HistoryLimit(4),
       ],
     );
   }
