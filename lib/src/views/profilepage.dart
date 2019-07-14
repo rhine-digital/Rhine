@@ -5,7 +5,7 @@ Description: Profile page to display user settings and other user-related inform
 */
 
 import 'package:flutter/material.dart';
-import 'package:flutter_speed_dial/flutter_speed_dial.dart';
+import 'package:unicorndial/unicorndial.dart';
 /*import 'package:qr_scanner_generator/scan.dart';
 import 'package:qr_scanner_generator/generate.dart';*/
 import 'package:flutter/rendering.dart';
@@ -13,6 +13,30 @@ import 'package:flutter/rendering.dart';
 class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    var childButtons = List<UnicornButton>();
+
+    childButtons.add(UnicornButton(
+      hasLabel: true,
+      labelText: "Scan QR",
+      currentButton: FloatingActionButton(
+        heroTag: "scanQR",
+        backgroundColor: Colors.red,
+        mini: true,
+        child: Icon(Icons.linked_camera),
+        onPressed: () {},
+      )));
+
+    childButtons.add(UnicornButton(
+      hasLabel: true,
+      labelText: "My QR",
+      currentButton: FloatingActionButton(
+        heroTag: "myQR",
+        backgroundColor: Colors.green,
+        mini: true,
+        child: Icon(Icons.brush),
+        onPressed: () {},
+      )));
+
     return Scaffold(
       appBar: new AppBar(title: new Text("Profile")),
       bottomNavigationBar: new BottomAppBar(
@@ -58,57 +82,24 @@ class Profile extends StatelessWidget {
         ),
       ),
       //------------------Floating Action Button---------------------
-      floatingActionButton: SpeedDial(
-        marginRight: 180,
-        //marginBottom: -40,
-        child: Icon(Icons.add),
-        
-        animatedIcon: AnimatedIcons.add_event,
-        animatedIconTheme: IconThemeData(size: 18.0),
-        
-        closeManually: false,
-        curve: Curves.bounceIn,
-        overlayColor: Colors.black87,
-        onOpen: () => print('OPENING DIAL'),
-        onClose: () => print('DIAL CLOSED'),
-        tooltip: 'Speed Dial',
-        heroTag: 'speed-dial-hero-tag',
-        backgroundColor: Colors.white,
-        foregroundColor: Colors.black,
-        elevation: 6.0,
-        shape: CircleBorder(),
-        children: [
-          SpeedDialChild
-          (
-            child: Icon(Icons.linked_camera),
-            backgroundColor: Colors.red,
-            label: 'Scan QR',
-            labelStyle: TextStyle(fontSize: 18.0),
-            
-            onTap: ()
-            {
-              /* Launch Native Camera with QR Scan*/
-            }
-          ),
-          SpeedDialChild(
-            child: Icon(Icons.brush),
-            backgroundColor: Colors.blue,
-            label: 'My QR',
-            labelStyle: TextStyle(fontSize: 18.0),
-            onTap: ()
-              {
-                /* Generates UserID QR Code*/
-              },
-          ),
-        ],
+      floatingActionButton: Container(
+        width: 70.0,
+        height: 80.0,
+        child: UnicornDialer(
+            hasNotch: true,
+            hasBackground: false,
+            backgroundColor: Color.fromRGBO(255, 255, 255, 0.5),
+            parentButtonBackground: Colors.blue,
+            orientation: UnicornOrientation.VERTICAL,
+            parentButton: Icon(Icons.add, color: Colors.black),
+            childButtons: childButtons),
       ),
       /*child: Icon(Icons.add),
       
       onPressed: () {
         
       }, */
-      
-      //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
        
