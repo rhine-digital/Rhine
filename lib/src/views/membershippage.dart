@@ -28,21 +28,38 @@ class _MembershipPageState extends State<MembershipPage> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           SizedBox(),
+
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/chatScreen');
-          }, icon: Icon(Icons.chat_bubble),),
+          }, 
+             icon: Icon(Icons.chat_bubble),
+             color: Colors.lightBlueAccent[400],
+             
+             ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/discovery');
-          }, icon: Icon(Icons.location_searching),),
+          }, 
+             icon: Icon(Icons.location_searching),
+             color: Colors.lightBlueAccent[400],
+
+          ),
           Container(
             height: 10,
             width: 20,
           ),
-          IconButton(onPressed: () {}, icon: Icon(Icons.inbox),),
+          IconButton(onPressed: () {},
+              icon: Icon(Icons.inbox),
+              color: Colors.lightBlueAccent[400],
+              
+          ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/profile');
-          }, icon: Icon(Icons.account_circle),),
+          }, icon: Icon(Icons.account_circle),
+             color: Colors.lightBlueAccent[400],
+             
+             ),
           SizedBox(),
+          
           ],
         ),
       ),
