@@ -42,20 +42,33 @@ class ChatScreenState extends State<ChatScreen> {
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: <Widget>[
           SizedBox(),
-          IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),),
+          IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),
+          color: Colors.lightBlueAccent[400],
+          
+          ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/discovery');
-          }, icon: Icon(Icons.location_searching),),
+          }, icon: Icon(Icons.location_searching),
+             color: Colors.lightBlueAccent[400],
+             
+             
+             ),
           Container(
             height: 10,
             width: 20,
           ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/membershipPage');
-          }, icon: Icon(Icons.inbox),),
+          }, icon: Icon(Icons.inbox),
+             color: Colors.lightBlueAccent[400],
+
+          ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/profile');
-          }, icon: Icon(Icons.account_circle),),
+          }, icon: Icon(Icons.account_circle),
+             color: Colors.lightBlueAccent[400],
+
+          ),
           SizedBox(),
           ],
         ),

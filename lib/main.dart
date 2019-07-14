@@ -6,8 +6,12 @@ Description: Runs application
 import 'package:flutter/material.dart';
 import 'package:rhine/src/app.dart';
 
+
+
 main() => runApp(RhineApp());
+
 
 // void main() {
 //   runApp(new RhineApp());
 // }
+

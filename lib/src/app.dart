@@ -7,7 +7,7 @@ Description: Stores app-wide information
 import 'package:flutter/material.dart';
 import '../src/views/chatscreen.dart';
 import '../src/resources/routes.dart';
-import '../src/resources/app-palette.dart';
+/*import '../src/resources/app-palette.dart'; */
 import '../src/resources/historylimit.dart';
 
 class RhineApp extends StatelessWidget {
