@@ -57,65 +57,58 @@ class Profile extends StatelessWidget {
           ],
         ),
       ),
-      
+      //------------------Floating Action Button---------------------
       floatingActionButton: SpeedDial(
-       marginRight: 170,
-       marginBottom: 70,
-       child: Icon(Icons.add),
-       
-       animatedIcon: AnimatedIcons.add_event,
-       animatedIconTheme: IconThemeData(size: 18.0),
-       
-
-       
-       closeManually: false,
-       curve: Curves.bounceIn,
-       overlayColor: Colors.black87,
-       onOpen: () => print('OPENING DIAL'),
-          onClose: () => print('DIAL CLOSED'),
-          tooltip: 'Speed Dial',
-          heroTag: 'speed-dial-hero-tag',
-          backgroundColor: Colors.white,
-          foregroundColor: Colors.black,
-          elevation: 6.0,
-          shape: CircleBorder(),
-          children: [
-            SpeedDialChild
-            (
-              child: Icon(Icons.linked_camera),
-              backgroundColor: Colors.red,
-              label: 'Scan QR',
-              labelStyle: TextStyle(fontSize: 18.0),
-              
-              onTap: ()
-               {
-                 /* Launch Native Camera with QR Scan*/
-               }
-            ),
-            SpeedDialChild(
-              child: Icon(Icons.brush),
-              backgroundColor: Colors.blue,
-              label: 'My QR',
-              labelStyle: TextStyle(fontSize: 18.0),
-              onTap: ()
-                {
-                  /* Generates UserID QR Code*/
-                },
-            ),
-          ],
-        ),
-
-
-        /*child: Icon(Icons.add),
+        marginRight: 180,
+        //marginBottom: -40,
+        child: Icon(Icons.add),
         
-        onPressed: () {
-          
-        }, */
+        animatedIcon: AnimatedIcons.add_event,
+        animatedIconTheme: IconThemeData(size: 18.0),
+        
+        closeManually: false,
+        curve: Curves.bounceIn,
+        overlayColor: Colors.black87,
+        onOpen: () => print('OPENING DIAL'),
+        onClose: () => print('DIAL CLOSED'),
+        tooltip: 'Speed Dial',
+        heroTag: 'speed-dial-hero-tag',
+        backgroundColor: Colors.white,
+        foregroundColor: Colors.black,
+        elevation: 6.0,
+        shape: CircleBorder(),
+        children: [
+          SpeedDialChild
+          (
+            child: Icon(Icons.linked_camera),
+            backgroundColor: Colors.red,
+            label: 'Scan QR',
+            labelStyle: TextStyle(fontSize: 18.0),
+            
+            onTap: ()
+            {
+              /* Launch Native Camera with QR Scan*/
+            }
+          ),
+          SpeedDialChild(
+            child: Icon(Icons.brush),
+            backgroundColor: Colors.blue,
+            label: 'My QR',
+            labelStyle: TextStyle(fontSize: 18.0),
+            onTap: ()
+              {
+                /* Generates UserID QR Code*/
+              },
+          ),
+        ],
+      ),
+      /*child: Icon(Icons.add),
       
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+      onPressed: () {
+        
+      }, */
       
-
-      
+      //floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
        
