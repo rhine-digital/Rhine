@@ -8,4 +8,9 @@ target 'Runner' do
   # Pods for Runner
   pod 'Firebase/Core'
   pod 'Firebase/Auth'
+
+  #For Social API Authentication
+  pod 'FBSDKLoginKit'
+    
 end
+
