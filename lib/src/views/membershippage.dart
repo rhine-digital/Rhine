@@ -1,10 +1,12 @@
 /*
 Created: 24-06-19
-Edited: 28-06-19
+Edited: 17-07-19
 Description: Membership page for Rhine. Displays membership info for respective merchants
 */
 
 import 'package:flutter/material.dart';
+import '../widgets/unicorn.dart';
+import '../resources/app-palette.dart';
 
 class MembershipPage extends StatefulWidget {
   MembershipPage({Key key, this.title}) : super(key : key);
@@ -33,14 +35,14 @@ class _MembershipPageState extends State<MembershipPage> {
             Navigator.pushNamed(context, '/chatScreen');
           }, 
              icon: Icon(Icons.chat_bubble),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
              
              ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/discovery');
           }, 
              icon: Icon(Icons.location_searching),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
 
           ),
           Container(
@@ -49,13 +51,13 @@ class _MembershipPageState extends State<MembershipPage> {
           ),
           IconButton(onPressed: () {},
               icon: Icon(Icons.inbox),
-              color: Colors.lightBlueAccent[400],
+              color: Palette.buttonColor,
               
           ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/profile');
           }, icon: Icon(Icons.account_circle),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
              
              ),
           SizedBox(),
@@ -63,9 +65,7 @@ class _MembershipPageState extends State<MembershipPage> {
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        child: Icon(Icons.add), onPressed: (){},
-        ),
+      floatingActionButton: new Unicorn(),
       floatingActionButtonLocation:
         FloatingActionButtonLocation.centerDocked,
     );

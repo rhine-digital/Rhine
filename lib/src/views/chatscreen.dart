@@ -1,10 +1,12 @@
 /*
 Created: 24-06-19
-Edited: 28-06-19
-Description: Chatscreen for mechant to user chat interface
+Edited: 17-07-19
+Description: Homepage for Rhine. The page the app routes to upon accessing the app. Chatscreen for mechant to user chat interface
 */
 
 import 'package:flutter/material.dart';
+import '../widgets/unicorn.dart';
+import '../resources/app-palette.dart';
 
 class FABBottomAppBarItem {
   FABBottomAppBarItem({this.iconData, this.text});
@@ -33,6 +35,7 @@ class ChatScreenState extends State<ChatScreen> {
   @override
   final TextEditingController _textController = new TextEditingController(); //new                                                        //new
   Widget build(BuildContext context) {
+
     return Scaffold(
       appBar: new AppBar(title: new Text("Chat")),
       body: _buildTextComposer(),
@@ -43,13 +46,13 @@ class ChatScreenState extends State<ChatScreen> {
         children: <Widget>[
           SizedBox(),
           IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),
-          color: Colors.lightBlueAccent[400],
+          color: Palette.buttonColor,
           
           ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/discovery');
           }, icon: Icon(Icons.location_searching),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
              
              
              ),
@@ -60,24 +63,27 @@ class ChatScreenState extends State<ChatScreen> {
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/membershipPage');
           }, icon: Icon(Icons.inbox),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
 
           ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/profile');
           }, icon: Icon(Icons.account_circle),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
 
           ),
           SizedBox(),
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        child: Icon(Icons.add), onPressed: (){},
-        ),
-      floatingActionButtonLocation:
-        FloatingActionButtonLocation.centerDocked,
+      //------------------Floating Action Button---------------------
+      floatingActionButton: new Unicorn(),
+      /*child: Icon(Icons.add),
+      
+      onPressed: () {
+        
+      }, */
+      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
   Widget _buildTextComposer() {

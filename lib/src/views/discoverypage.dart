@@ -1,10 +1,12 @@
 /*
 Created: 24-06-19
-Edited: 28-06-19
-Description: Homepage for Rhine. The page the app routes to upon accessing the app. Displays promotion carousell and recent discounts
+Edited: 17-07-19
+Description: Displays promotion carousell and recent discounts
 */
 
 import 'package:flutter/material.dart';
+import '../widgets/unicorn.dart';
+import '../resources/app-palette.dart';
 
 class DiscoveryPage extends StatefulWidget {
   DiscoveryPage({Key key, this.title}) : super(key: key);
@@ -58,13 +60,13 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
             Navigator.pushNamed(context, '/chatScreen');
           }, 
             icon: Icon(Icons.chat_bubble),
-            color: Colors.lightBlueAccent[400],
+            color: Palette.buttonColor,
             
             ),
             
           IconButton(onPressed: () {}, 
           icon: Icon(Icons.location_searching),
-          color: Colors.lightBlueAccent[400],
+          color: Palette.buttonColor,
           
           ),
           Container(
@@ -74,22 +76,21 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/membershipPage');
           }, icon: Icon(Icons.inbox),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
              
              ),
           IconButton(onPressed: () {
             Navigator.pushNamed(context, '/profile');
           }, icon: Icon(Icons.account_circle),
-             color: Colors.lightBlueAccent[400],
+             color: Palette.buttonColor,
              
              ),
           SizedBox(),
           ],
         ),
       ),
-      floatingActionButton: new FloatingActionButton(
-        child: Icon(Icons.add), onPressed: (){},
-        ),
+      floatingActionButton: new Unicorn(),
+
       floatingActionButtonLocation:
         FloatingActionButtonLocation.centerDocked,
     );

@@ -1,41 +1,19 @@
 /*
 Created: 28-06-19
-Edited: 28-06-19
+Edited: 17-07-19
 Description: Profile page to display user settings and other user-related information
 */
 
 import 'package:flutter/material.dart';
-import 'package:unicorndial/unicorndial.dart';
 /*import 'package:qr_scanner_generator/scan.dart';
 import 'package:qr_scanner_generator/generate.dart';*/
 import 'package:flutter/rendering.dart';
+import '../resources/app-palette.dart';
+import '../widgets/unicorn.dart';
 
 class Profile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var childButtons = List<UnicornButton>();
-
-    childButtons.add(UnicornButton(
-      hasLabel: true,
-      labelText: "Scan QR",
-      currentButton: FloatingActionButton(
-        heroTag: "scanQR",
-        backgroundColor: Colors.red,
-        mini: true,
-        child: Icon(Icons.linked_camera),
-        onPressed: () {},
-      )));
-
-    childButtons.add(UnicornButton(
-      hasLabel: true,
-      labelText: "My QR",
-      currentButton: FloatingActionButton(
-        heroTag: "myQR",
-        backgroundColor: Colors.green,
-        mini: true,
-        child: Icon(Icons.brush),
-        onPressed: () {},
-      )));
 
     return Scaffold(
       appBar: new AppBar(title: new Text("Profile")),
@@ -50,7 +28,7 @@ class Profile extends StatelessWidget {
                 Navigator.pushNamed(context, '/chatScreen');
               },
               icon: Icon(Icons.chat_bubble),
-              color: Colors.lightBlueAccent[400],
+              color: Palette.buttonColor,
               
               
             ),
@@ -59,7 +37,7 @@ class Profile extends StatelessWidget {
                 Navigator.pushNamed(context, '/discovery');
               },
               icon: Icon(Icons.location_searching),
-              color: Colors.lightBlueAccent[400],
+              color: Palette.buttonColor,
             ),
             Container(
               height: 10,
@@ -70,30 +48,19 @@ class Profile extends StatelessWidget {
                 Navigator.pushNamed(context, '/membershipPage');
               },
               icon: Icon(Icons.inbox),
-              color: Colors.lightBlueAccent[400],
+              color: Palette.buttonColor,
             ),
             IconButton(
               onPressed: () {},
               icon: Icon(Icons.account_circle),
-              color: Colors.lightBlueAccent[400],
+              color: Palette.buttonColor,
             ),
             SizedBox(),
           ],
         ),
       ),
       //------------------Floating Action Button---------------------
-      floatingActionButton: Container(
-        width: 70.0,
-        height: 80.0,
-        child: UnicornDialer(
-            hasNotch: true,
-            hasBackground: false,
-            backgroundColor: Color.fromRGBO(255, 255, 255, 0.5),
-            parentButtonBackground: Colors.blue,
-            orientation: UnicornOrientation.VERTICAL,
-            parentButton: Icon(Icons.add, color: Colors.black),
-            childButtons: childButtons),
-      ),
+      floatingActionButton: new Unicorn(),
       /*child: Icon(Icons.add),
       
       onPressed: () {
