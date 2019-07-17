@@ -29,8 +29,6 @@ class Profile extends StatelessWidget {
               },
               icon: Icon(Icons.chat_bubble),
               color: Palette.buttonColor,
-              
-              
             ),
             IconButton(
               onPressed: () {

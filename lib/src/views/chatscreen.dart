@@ -42,37 +42,40 @@ class ChatScreenState extends State<ChatScreen> {
       bottomNavigationBar: new BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          SizedBox(),
-          IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),
-          color: Palette.buttonColor,
-          
-          ),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/discovery');
-          }, icon: Icon(Icons.location_searching),
-             color: Palette.buttonColor,
-             
-             
-             ),
-          Container(
-            height: 10,
-            width: 20,
-          ),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/membershipPage');
-          }, icon: Icon(Icons.inbox),
-             color: Palette.buttonColor,
-
-          ),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/profile');
-          }, icon: Icon(Icons.account_circle),
-             color: Palette.buttonColor,
-
-          ),
-          SizedBox(),
+          mainAxisAlignment: MainAxisAlignment.spaceBetween,
+          children: <Widget>[
+            SizedBox(),
+            IconButton(
+              onPressed: () {}, 
+              icon: Icon(Icons.chat_bubble),
+              color: Palette.buttonColor,
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/discovery');
+              }, 
+              icon: Icon(Icons.location_searching),
+              color: Palette.buttonColor,
+            ),
+            Container(
+              height: 10,
+              width: 20,
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/membershipPage');
+              }, 
+              icon: Icon(Icons.inbox),
+              color: Palette.buttonColor,
+            ),
+            IconButton(
+              onPressed: () {
+                Navigator.pushNamed(context, '/profile');
+              }, 
+              icon: Icon(Icons.account_circle),
+              color: Palette.buttonColor,
+            ),
+            SizedBox(),
           ],
         ),
       ),
