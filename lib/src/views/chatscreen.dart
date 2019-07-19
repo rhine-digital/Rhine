@@ -1,12 +1,12 @@
 /*
 Created: 24-06-19
-Edited: 17-07-19
+Edited: 19-07-19
 Description: Homepage for Rhine. The page the app routes to upon accessing the app. Chatscreen for mechant to user chat interface
 */
 
 import 'package:flutter/material.dart';
 import '../widgets/unicorn.dart';
-import '../resources/app-palette.dart';
+import '../widgets/bottomapp.dart';
 
 class FABBottomAppBarItem {
   FABBottomAppBarItem({this.iconData, this.text});
@@ -39,46 +39,7 @@ class ChatScreenState extends State<ChatScreen> {
     return Scaffold(
       appBar: new AppBar(title: new Text("Chat")),
       body: _buildTextComposer(),
-      bottomNavigationBar: new BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        child: new Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(),
-            IconButton(
-              onPressed: () {}, 
-              icon: Icon(Icons.chat_bubble),
-              color: Palette.buttonColor,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/discovery');
-              }, 
-              icon: Icon(Icons.location_searching),
-              color: Palette.buttonColor,
-            ),
-            Container(
-              height: 10,
-              width: 20,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/membershipPage');
-              }, 
-              icon: Icon(Icons.inbox),
-              color: Palette.buttonColor,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/profile');
-              }, 
-              icon: Icon(Icons.account_circle),
-              color: Palette.buttonColor,
-            ),
-            SizedBox(),
-          ],
-        ),
-      ),
+      bottomNavigationBar: new BottomApp(1),
       //------------------Floating Action Button---------------------
       floatingActionButton: new Unicorn(),
       /*child: Icon(Icons.add),

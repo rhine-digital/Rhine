@@ -6,7 +6,7 @@ Description: Displays promotion carousell and recent discounts
 
 import 'package:flutter/material.dart';
 import '../widgets/unicorn.dart';
-import '../resources/app-palette.dart';
+import '../widgets/bottomapp.dart';
 
 class DiscoveryPage extends StatefulWidget {
   DiscoveryPage({Key key, this.title}) : super(key: key);
@@ -50,49 +50,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
     // than having to individually change instances of widgets.
     return Scaffold(
       appBar: new AppBar(title: new Text("Discovery")),
-      bottomNavigationBar: new BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        child: new Row(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: <Widget>[
-            SizedBox(),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/chatScreen');
-              }, 
-              icon: Icon(Icons.chat_bubble),
-              color: Palette.buttonColor,
-              
-            ),
-            IconButton(
-              onPressed: () {}, 
-              icon: Icon(Icons.location_searching),
-              color: Palette.buttonColor,
-            ),
-            Container(
-              height: 10,
-              width: 20,
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/membershipPage');
-              }, 
-              icon: Icon(Icons.inbox),
-              color: Palette.buttonColor,
-              
-            ),
-            IconButton(
-              onPressed: () {
-                Navigator.pushNamed(context, '/profile');
-              }, 
-              icon: Icon(Icons.account_circle),
-              color: Palette.buttonColor,
-              
-            ),
-            SizedBox(),
-          ],
-        ),
-      ),
+      bottomNavigationBar: new BottomApp(2),
       floatingActionButton: new Unicorn(),
 
       floatingActionButtonLocation:
