@@ -7,6 +7,7 @@ Description: Bottom nav bar of the app
 import 'package:flutter/material.dart';
 import 'package:flutter/rendering.dart';
 import '../resources/app-palette.dart';
+import '../widgets/customflatbutton.dart';
 
 class BottomApp extends StatelessWidget {
   BottomApp(this.pageNum);
@@ -19,55 +20,69 @@ class BottomApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     
-    return new BottomAppBar(
+    return new Container(
+      //height: 60,
+      padding: EdgeInsets.only(top: 5),
+      child: BottomAppBar(
         shape: CircularNotchedRectangle(),
         child: new Row(
           mainAxisAlignment: MainAxisAlignment.spaceBetween,
           children: <Widget>[
             SizedBox(),
-            IconButton(
-              onPressed: () {
+            CustomFlatButton(
+              label: "Chat",
+              textColor: Palette.buttonColor,
+              icon: Icons.chat_bubble,
+              iconColor: Palette.buttonColor,
+              onTap: () {
                 if(pageNum != 1) {
                   Navigator.pushNamed(context, '/chatScreen');
                 }
               },
-              icon: Icon(Icons.chat_bubble),
-              color: Palette.buttonColor,
+              
             ),
-            IconButton(
-              onPressed: () {
+            CustomFlatButton(
+              label: "Discover",
+              textColor: Palette.buttonColor,
+              icon: Icons.location_searching,
+              iconColor: Palette.buttonColor,
+              onTap: () {
                 if(pageNum != 2) {
                   Navigator.pushNamed(context, '/discovery');
                 }
               },
-              icon: Icon(Icons.location_searching),
-              color: Palette.buttonColor,
+              
             ),
             Container(
               height: 10,
-              width: 20,
+              width: 35,
             ),
-            IconButton(
-              onPressed: () {
+            CustomFlatButton(
+              label: "Member",
+              textColor: Palette.buttonColor,
+              icon: Icons.inbox,
+              iconColor: Palette.buttonColor,
+              onTap: () {
                 if(pageNum != 3) {
                   Navigator.pushNamed(context, '/membershipPage');
                 }
-              },
-              icon: Icon(Icons.inbox),
-              color: Palette.buttonColor,
+              }
             ),
-            IconButton(
-              onPressed: () {
+            CustomFlatButton(
+              label: "Profile",
+              textColor: Palette.buttonColor,
+              icon: Icons.account_circle,
+              iconColor: Palette.buttonColor,
+              onTap: () {
                 if(pageNum != 4) {
                   Navigator.pushNamed(context, '/profile');
                 }
-              },
-              icon: Icon(Icons.account_circle),
-              color: Palette.buttonColor,
+              }
             ),
             SizedBox(),
           ],
         ),
-      );
+      )
+    );
   }
 }
