@@ -37,7 +37,10 @@ class ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: new AppBar(title: new Text("Chat")),
+      appBar: new AppBar(
+        title: new Text("Chat"),
+        automaticallyImplyLeading: false,
+      ),
       body: _buildTextComposer(),
       bottomNavigationBar: new BottomApp(1),
       //------------------Floating Action Button---------------------

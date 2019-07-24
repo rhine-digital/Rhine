@@ -49,7 +49,10 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: new AppBar(title: new Text("Discovery")),
+      appBar: new AppBar(
+        title: new Text("Discovery"),
+        automaticallyImplyLeading: false,
+      ),
       bottomNavigationBar: new BottomApp(2),
       floatingActionButton: new Unicorn(),
 

@@ -9,14 +9,12 @@ import 'package:flutter/rendering.dart';
 import '../resources/app-palette.dart';
 
 class BottomApp extends StatelessWidget {
+  BottomApp(this.pageNum);
 
   //Represent various pages. 
   // 1 - Chat, 2 - Discovery, 3 - Membership, 4 - Profile
-  int pageNum;
+  final int pageNum;
 
-  BottomApp(option) {
-    pageNum = option;
-  }
 
   @override
   Widget build(BuildContext context) {

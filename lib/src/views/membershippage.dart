@@ -23,7 +23,10 @@ class _MembershipPageState extends State<MembershipPage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: new AppBar(title: new Text("Membership")),
+      appBar: new AppBar(
+        title: new Text("Membership"),
+        automaticallyImplyLeading: false,
+      ),
       bottomNavigationBar: new BottomApp(3),
       floatingActionButton: new Unicorn(),
       floatingActionButtonLocation:
