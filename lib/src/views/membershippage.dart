@@ -25,6 +25,7 @@ class _MembershipPageState extends State<MembershipPage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
+<<<<<<< HEAD
       appBar: new AppBar(title: new Text("Membership")),
       automaticallyImplyLeading: false,
       body: SingleChildScrollView(child: Column(crossAxisAlignment: CrossAxisAlignment.start,
@@ -56,6 +57,12 @@ class _MembershipPageState extends State<MembershipPage> {
       
       ),
 
+=======
+      appBar: new AppBar(
+        title: new Text("Membership"),
+        automaticallyImplyLeading: false,
+      ),
+>>>>>>> 4af6615df63cd2618341a3cdb9bd227ae2a1796d
       bottomNavigationBar: new BottomApp(3),
       floatingActionButton: new Unicorn(),
       floatingActionButtonLocation:

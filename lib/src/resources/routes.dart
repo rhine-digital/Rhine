@@ -19,6 +19,6 @@ class RouteStore {
     '/discovery' : (BuildContext context) => DiscoveryPage(),
     '/membershipPage' : (BuildContext context) => MembershipPage(),
     '/chatScreen' : (BuildContext context) => ChatScreen(),
-    '/profile' : (BuildContext context) => Profile(),
+    '/profile' : (BuildContext context) => ProfilePage(),
   };
 }
