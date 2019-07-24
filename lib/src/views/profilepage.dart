@@ -9,6 +9,7 @@ import 'package:flutter/material.dart';
 import 'package:qr_scanner_generator/generate.dart';*/
 import '../widgets/bottomapp.dart';
 import '../widgets/unicorn.dart';
+import '../widgets/customflatbutton.dart';
 import '../resources/app-palette.dart';
 
 class ProfilePage extends StatelessWidget {
@@ -84,27 +85,36 @@ class ProfilePage extends StatelessWidget {
 
   Widget _buildNavBar(Size screenSize) {
     return Container(
-      padding: EdgeInsets.only( top: screenSize.height / 15 ),
+      padding: EdgeInsets.only( top: screenSize.height / 15, bottom: screenSize.height / 15),
       child: BottomAppBar(
         elevation: 0,
         child: Row(
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: <Widget>[
-            IconButton(
-              onPressed: (){
-                //Do something
+            CustomFlatButton(
+              splashColor: Color(0x00FFFFFF),
+              highlightColor: Palette.btnHLightColor,
+              label: "Coupon",
+              textColor: Palette.secButtonColor,
+              icon: Icons.loyalty,
+              iconColor: Palette.secButtonColor,
+              isContainedInk: false,
+              onTap: () {
+                //Do something here
               },
-              icon: Icon(Icons.loyalty),
-              color: Palette.buttonColor,
             ),
-            IconButton(
-              onPressed: (){
-                //Do something
+            CustomFlatButton(
+              splashColor: Color(0x00FFFFFF),
+              highlightColor: Palette.btnHLightColor,
+              label: "Coins",
+              textColor: Palette.secButtonColor,
+              icon: Icons.fiber_smart_record,
+              iconColor: Palette.secButtonColor,
+              isContainedInk: false,
+              onTap: () {
+                //Do something here
               },
-              icon: Icon(Icons.fiber_smart_record),
-              color: Palette.buttonColor,
             ),
-
           ],
         )
       ),
