@@ -102,7 +102,6 @@ class _MembershipPageState extends State<MembershipPage> {
       
       )
       ),
-
       bottomNavigationBar: new BottomApp(3),
       floatingActionButton: new Unicorn(),
       floatingActionButtonLocation:
