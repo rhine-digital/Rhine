@@ -8,6 +8,7 @@ import 'package:flutter/material.dart';
 import '../widgets/unicorn.dart';
 import '../widgets/bottomapp.dart';
 
+
 class MembershipPage extends StatefulWidget {
   MembershipPage({Key key, this.title}) : super(key : key);
 
@@ -15,6 +16,7 @@ class MembershipPage extends StatefulWidget {
   final String title;
   @override
   _MembershipPageState createState() => _MembershipPageState();
+  
 }
 
 class _MembershipPageState extends State<MembershipPage> {
@@ -24,10 +26,45 @@ class _MembershipPageState extends State<MembershipPage> {
     
     return Scaffold(
       appBar: new AppBar(title: new Text("Membership")),
+      automaticallyImplyLeading: false,
+      body: SingleChildScrollView(child: Column(crossAxisAlignment: CrossAxisAlignment.start,
+      children: <Widget>
+      
+      [Container(
+        color: Colors.blueAccent,
+        alignment: Alignment.bottomRight,
+        height: 200,
+        child: Text("this.alignment"),
+        
+      ),
+      Container(
+        constraints: BoxConstraints.expand(height: 100.0),
+        margin: EdgeInsets.all(10), //Border to follow Rhine Design Language
+        padding: EdgeInsets.all(10),
+        decoration: ShapeDecoration(
+        shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(
+        Radius.circular(10.0),
+        ),
+        ),
+          color: Colors.redAccent),
+          child: Text("decoration: ShapeDecoration"),
+        )
+      ],
+      
+      )
+      
+      ),
+
       bottomNavigationBar: new BottomApp(3),
       floatingActionButton: new Unicorn(),
       floatingActionButtonLocation:
-        FloatingActionButtonLocation.centerDocked,
+      FloatingActionButtonLocation.centerDocked,
+      
+    
+
     );
+
   }
+  
 }
