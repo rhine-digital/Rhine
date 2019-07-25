@@ -8,6 +8,7 @@ import 'package:flutter/services.dart';
 import 'package:rhine/src/app.dart';
 
 
+
 void main() async{
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_)
    {

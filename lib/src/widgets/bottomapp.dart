@@ -55,7 +55,7 @@ class BottomApp extends StatelessWidget {
             ),
             Container(
               height: 10,
-              width: 35,
+              width: 25,
             ),
             CustomFlatButton(
               label: "Member",
