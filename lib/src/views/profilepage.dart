@@ -7,8 +7,6 @@ Description: Profile page to display user settings and other user-related inform
 import 'package:flutter/material.dart';
 /*import 'package:qr_scanner_generator/scan.dart';
 import 'package:qr_scanner_generator/generate.dart';*/
-import '../widgets/bottomapp.dart';
-import '../widgets/unicorn.dart';
 import '../widgets/customflatbutton.dart';
 import '../resources/app-palette.dart';
 
@@ -19,10 +17,6 @@ class ProfilePage extends StatelessWidget {
     Size screenSize = MediaQuery.of(context).size;
 
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Profile"),
-        automaticallyImplyLeading: false,
-      ),
       body: Stack(
         children: <Widget>[
           _buildCoverImage(screenSize),
@@ -39,15 +33,6 @@ class ProfilePage extends StatelessWidget {
           
         ],
       ),
-      bottomNavigationBar: new BottomApp(4),
-      //------------------Floating Action Button---------------------
-      floatingActionButton: new Unicorn(),
-      /*child: Icon(Icons.add),
-      
-      onPressed: () {
-        
-      }, */
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
 

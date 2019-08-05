@@ -10,6 +10,7 @@ class Palette {
   
   //Tertiary color for nav button
   static var buttonColor = Colors.lightBlueAccent[400];
+  static var notButtonColor = Colors.black26;
 
   //Color for in-page navigation 
   static var secButtonColor = Color(0xFFA6A6A6);

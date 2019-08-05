@@ -5,8 +5,6 @@ Description: Membership page for Rhine. Displays membership info for respective 
 */
 
 import 'package:flutter/material.dart';
-import '../widgets/unicorn.dart';
-import '../widgets/bottomapp.dart';
 
 
 class MembershipPage extends StatefulWidget {
@@ -25,17 +23,7 @@ class _MembershipPageState extends State<MembershipPage> {
   Widget build(BuildContext context) {
     
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Membership"),
-        automaticallyImplyLeading: false,
-      ),
-      bottomNavigationBar: new BottomApp(3),
-      floatingActionButton: new Unicorn(),
-      floatingActionButtonLocation:
-      FloatingActionButtonLocation.centerDocked,
-      
-    
-
+      // Do stuff here
     );
 
   }

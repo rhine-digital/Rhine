@@ -5,8 +5,6 @@ Description: Homepage for Rhine. The page the app routes to upon accessing the a
 */
 
 import 'package:flutter/material.dart';
-import '../widgets/unicorn.dart';
-import '../widgets/bottomapp.dart';
 
 class FABBottomAppBarItem {
   FABBottomAppBarItem({this.iconData, this.text});
@@ -37,20 +35,7 @@ class ChatScreenState extends State<ChatScreen> {
   Widget build(BuildContext context) {
 
     return Scaffold(
-      appBar: new AppBar(
-        title: new Text("Chat"),
-        automaticallyImplyLeading: false,
-      ),
       body: _buildTextComposer(),
-      bottomNavigationBar: new BottomApp(1),
-      //------------------Floating Action Button---------------------
-      floatingActionButton: new Unicorn(),
-      /*child: Icon(Icons.add),
-      
-      onPressed: () {
-        
-      }, */
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
     );
   }
   Widget _buildTextComposer() {
