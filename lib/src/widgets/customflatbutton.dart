@@ -40,11 +40,15 @@ class CustomFlatButton extends StatelessWidget {
     return Container(
       width: width,
       height: height,
+      
       child: InkResponse(
+        
         splashColor: splashColor,
         highlightColor: highlightColor,
+        
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
+          
           children: <Widget>[
             Icon(
               icon,
