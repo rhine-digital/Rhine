@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "79117046249",
+    "firebase_url": "https://rhinedigital.firebaseio.com",
+    "project_id": "rhinedigital",
+    "storage_bucket": "rhinedigital.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:79117046249:android:85281e197b1e9d78",
+        "android_client_info": {
+          "package_name": "com.rhinedigital.rhine"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "79117046249-0n4317v71eh6o13h4brfmk0hspbtt8up.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.rhinedigital.rhine",
+            "certificate_hash": "2cbeb30a284da48fb18baeb8f3f4cb6bcbc1b51f"
+          }
+        },
+        {
+          "client_id": "79117046249-7kqvvskakev68cssd9c896qbaoqg2jg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmGaN-c4X_T5h07hinuzXZZt1FBiQpWOI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "79117046249-7kqvvskakev68cssd9c896qbaoqg2jg2.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "79117046249-76rr7ou9eoej3mnv4ce5ci8i4m21g8h4.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.example.rhine"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

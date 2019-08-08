@@ -1,4 +1,4 @@
-package com.example.rhine;
+package com.rhinedigital.rhine;
 
 import android.os.Bundle;
 import io.flutter.app.FlutterActivity;
