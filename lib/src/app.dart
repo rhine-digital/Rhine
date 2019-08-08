@@ -5,10 +5,8 @@ Description: Stores app-wide information
 */
 
 import 'package:flutter/material.dart';
-import '../src/views/chatscreen.dart';
-import '../src/resources/routes.dart';
+import 'views/homepage.dart';
 /*import '../src/resources/app-palette.dart'; */
-import '../src/resources/historylimit.dart';
 
 
 class RhineApp extends StatelessWidget {
@@ -22,11 +20,7 @@ class RhineApp extends StatelessWidget {
         
         primarySwatch: Colors.blue,
       ),
-      home: ChatScreen(title: 'Rhine Demo HomePage'),
-      routes: RouteStore.routes,
-      navigatorObservers: [
-        HistoryLimit(4),
-      ],
+      home: HomePage(title: 'Rhine Demo HomePage'),
     );
   }
 }

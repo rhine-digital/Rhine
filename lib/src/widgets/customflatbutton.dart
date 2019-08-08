@@ -5,13 +5,13 @@ Description: Custom flat button widget
 */
 import 'package:flutter/material.dart';
 
-//Creates a custom flat button with a label and icon.
+//Creates a custom flat button with a customizable label and icon.
 class CustomFlatButton extends StatelessWidget {
   CustomFlatButton ({ @required this.label, @required this.icon, @required this.textColor, @required this.iconColor,
-                      @required this.onTap, this.width = 87, this.height = 50, 
+                      @required this.onTap, this.width = 85, this.height = 50, 
                       this.buttonBgColor = const Color(0xFFFFFF), this.splashColor = const Color(0x006E6E6E), 
                       this.highlightColor = const Color(0xFFE8E8E8), this.isContainedInk = true});
-
+  
   final String label;
 
   final IconData icon;
@@ -55,11 +55,11 @@ class CustomFlatButton extends StatelessWidget {
               color: iconColor
             ),
             Flexible(
-              child: new Text(label,style: TextStyle(color: textColor))
-              
-              ,)
-            
-            
+              child: Text(
+                label,
+                style: TextStyle(color: textColor)
+              )
+            ),
           ],
         ),
         onTap: onTap,

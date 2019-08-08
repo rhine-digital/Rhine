@@ -1,6 +1,6 @@
 /*
 Created: 17-07-19
-Edited: 17-07-19
+Edited: 05-08-19
 Description: Contains unicorn dial button
 */
 
@@ -41,13 +41,16 @@ class Unicorn extends StatelessWidget {
         width: 70.0,
         height: 80.0,
         child: UnicornDialer(
-            hasNotch: true,
-            hasBackground: false,
-            backgroundColor: Color.fromRGBO(255, 255, 255, 0.5),
-            parentButtonBackground: Palette.buttonColor,
-            orientation: UnicornOrientation.VERTICAL,
-            parentButton: Icon(Icons.add, color: Colors.black),
-            childButtons: childButtons),
+          //parentHeroTag: "Home",
+          hasNotch: true,
+          hasBackground: false,
+          backgroundColor: Color.fromRGBO(255, 255, 255, 0.5),
+          parentButtonBackground: Palette.buttonColor,
+          orientation: UnicornOrientation.VERTICAL,
+          parentButton: Icon(Icons.add, color: Colors.black),
+          childButtons: childButtons,
+          animationDuration: 180
+        ),
       );
 
   }
