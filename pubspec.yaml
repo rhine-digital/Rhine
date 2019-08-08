@@ -20,6 +20,7 @@ dependencies:
   flutter:
     sdk: flutter
   unicorndial: ^1.1.5
+  floating_search_bar: ^0.2.0
   
   #flutter_facebook_login: ^2.0.1
   #firebase_auth: ^0.11.1+10
@@ -39,7 +40,10 @@ dev_dependencies:
   flutter_test:
     sdk: flutter
   font_awesome_flutter: ^8.0.1
- 
+  
+  #cloud_firestore: ^0.9.7
+  #firebase_auth: ^0.8.1+4
+  #google_sign_in: ^4.0.1+1 
 
 
 # For information on the generic Dart part of this file, see the

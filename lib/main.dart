@@ -9,13 +9,13 @@ import 'package:rhine/src/app.dart';
 
 
 
+
 void main() async{
   SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_)
    {
     runApp(RhineApp());
+   
    });
 }
-
-
 
 

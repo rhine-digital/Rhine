@@ -85,18 +85,25 @@ class _MembershipPageState extends State<MembershipPage> {
         Container(
         constraints: BoxConstraints.expand(height: 200.0,width:160.0),
         margin: EdgeInsets.only(left:20,top:8), //Border to follow Rhine Design Language
-         padding: EdgeInsets.only(left:30.0,right:30.0,top:140.0,bottom:40.0),
-        decoration: ShapeDecoration( 
-        shape: RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(
-        Radius.circular(10.0),
-        ),
-        ),
-          color: Colors.yellow[100]),
-          child: Text("Company DEF"),
+        padding: EdgeInsets.only(left:30.0,right:30.0,top:140.0,bottom:40.0),
+        decoration: ShapeDecoration
+        ( 
+          shape: RoundedRectangleBorder
+          
+          (
+            
+            borderRadius: BorderRadius.all
+            
+              (
+                Radius.circular(10.0),
+              ),
+          ),
+
+                color: Colors.yellow[100]),
+                child: Text("Company DEF"),
           
           
-        )
+                )
       ],
       
       
