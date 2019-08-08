@@ -1,7 +1,7 @@
 /*
 Created: 24-06-19
-Edited: 28-06-19
-Description: Chatscreen for mechant to user chat interface
+Edited: 19-07-19
+Description: Homepage for Rhine. The page the app routes to upon accessing the app. Chatscreen for mechant to user chat interface
 */
 
 import 'package:flutter/material.dart';
@@ -33,38 +33,9 @@ class ChatScreenState extends State<ChatScreen> {
   @override
   final TextEditingController _textController = new TextEditingController(); //new                                                        //new
   Widget build(BuildContext context) {
+
     return Scaffold(
-      appBar: new AppBar(title: new Text("Chat")),
       body: _buildTextComposer(),
-      bottomNavigationBar: new BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          SizedBox(),
-          IconButton(onPressed: () {}, icon: Icon(Icons.chat_bubble),),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/discovery');
-          }, icon: Icon(Icons.location_searching),),
-          Container(
-            height: 10,
-            width: 20,
-          ),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/membershipPage');
-          }, icon: Icon(Icons.inbox),),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/profile');
-          }, icon: Icon(Icons.account_circle),),
-          SizedBox(),
-          ],
-        ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        child: Icon(Icons.add), onPressed: (){},
-        ),
-      floatingActionButtonLocation:
-        FloatingActionButtonLocation.centerDocked,
     );
   }
   Widget _buildTextComposer() {

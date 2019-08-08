@@ -4,10 +4,18 @@ Description: Runs application
 */
 
 import 'package:flutter/material.dart';
-import 'src/app.dart';
+import 'package:flutter/services.dart';
+import 'package:rhine/src/app.dart';
 
-main() => runApp(RhineApp());
 
-// void main() {
-//   runApp(new RhineApp());
-// }
+
+
+void main() async{
+  SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]).then((_)
+   {
+    runApp(RhineApp());
+   
+   });
+}
+
+

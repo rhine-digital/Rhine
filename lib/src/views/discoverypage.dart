@@ -1,7 +1,7 @@
 /*
 Created: 24-06-19
-Edited: 28-06-19
-Description: Homepage for Rhine. The page the app routes to upon accessing the app. Displays promotion carousell and recent discounts
+Edited: 17-07-19
+Description: Displays promotion carousell and recent discounts
 */
 
 import 'package:flutter/material.dart';
@@ -25,18 +25,7 @@ class DiscoveryPage extends StatefulWidget {
 }
 
 class _DiscoveryPageState extends State<DiscoveryPage> {
-  int _counter = 0;
-
-  void _incrementCounter() {
-    setState(() {
-      // This call to setState tells the Flutter framework that something has
-      // changed in this State, which causes it to rerun the build method below
-      // so that the display can reflect the updated values. If we changed
-      // _counter without calling setState(), then the build method would not be
-      // called again, and so nothing would appear to happen.
-      _counter++;
-    });
-  }
+  
 
   @override
   Widget build(BuildContext context) {
@@ -47,36 +36,7 @@ class _DiscoveryPageState extends State<DiscoveryPage> {
     // fast, so that you can just rebuild anything that needs updating rather
     // than having to individually change instances of widgets.
     return Scaffold(
-      appBar: new AppBar(title: new Text("Discovery")),
-      bottomNavigationBar: new BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        child: new Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        children: <Widget>[
-          SizedBox(),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/chatScreen');
-          }, icon: Icon(Icons.chat_bubble),),
-          IconButton(onPressed: () {}, icon: Icon(Icons.location_searching),),
-          Container(
-            height: 10,
-            width: 20,
-          ),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/membershipPage');
-          }, icon: Icon(Icons.inbox),),
-          IconButton(onPressed: () {
-            Navigator.pushNamed(context, '/profile');
-          }, icon: Icon(Icons.account_circle),),
-          SizedBox(),
-          ],
-        ),
-      ),
-      floatingActionButton: new FloatingActionButton(
-        child: Icon(Icons.add), onPressed: (){},
-        ),
-      floatingActionButtonLocation:
-        FloatingActionButtonLocation.centerDocked,
+      //Do stuff here
     );
   }
 }
