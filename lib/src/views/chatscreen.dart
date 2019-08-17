@@ -5,6 +5,7 @@ Description: Homepage for Rhine. The page the app routes to upon accessing the a
 */
 
 import 'package:flutter/material.dart';
+import 'Chat.dart';
 
 class FABBottomAppBarItem {
   FABBottomAppBarItem({this.iconData, this.text});
@@ -62,7 +63,7 @@ class ChatScreenState extends State<ChatScreen> {
         
               onTap:()
               {  
-            Navigator.push(context,MaterialPageRoute(builder: (context) => SecondScreen(data:titles[index]),));
+            Navigator.push(context,MaterialPageRoute(builder: (context) => Chat(data:titles[index]),));
               },
 
             ),
@@ -71,38 +72,3 @@ class ChatScreenState extends State<ChatScreen> {
         },
       ); 
 }
-        
-void _navigateToSecondScreen(BuildContext context) {
-          
-              Navigator.push(
-            context,
-            MaterialPageRoute(
-              builder: (context) => SecondScreen(data:titles[index]),
-            ));
-      
-          }
-
-class SecondScreen extends StatelessWidget {
-  @override
-    final String data;
-    SecondScreen({Key key, @required this.data}) : super(key: key);
-      Widget build(BuildContext context) {
-        return Scaffold(
-          body: Center(
-            child: RaisedButton(
-              child: Text(
-                data,
-                style: TextStyle(fontSize: 24),
-              ),
-              onPressed: () {
-                _goBackToFirstScreen(context);
-              },
-            ),
-          ),
-        );
-      }
-
-      void _goBackToFirstScreen(BuildContext context) {
-        Navigator.pop(context);
-      }
-    }
